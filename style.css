@@ -1,0 +1,129 @@
+/* mobil first */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body.theme1{
+    background:  hsl(222, 26%, 31%);
+}
+
+body{
+    padding: 30px;
+    font-family:"League Spartan", sans-serif ;
+    font-weight: 700;
+}
+
+.calculator-container{
+    margin-bottom: 30px;
+}
+
+.header-calculator{
+    color: hsl(0, 0%, 100%);
+    display: flex;
+    align-items: end;
+    margin-bottom: 30px;
+}
+
+.title{
+    font-size: 26px;
+}
+
+.theme-title{
+    margin-left: auto;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+.theme-container{
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    width: 65px;
+}
+
+.theme-choices{
+    display: flex;
+    margin-bottom: 5px;
+    margin-left: 10px;
+}
+
+.theme-container div{
+    font-size: 12px;
+}
+
+.theme-container div:not(:last-child){
+    margin-right: 15px;
+}
+
+.theme-switch{
+    background: hsl(223, 31%, 20%);
+    width: 65px;
+    height: 25px;
+    padding: 4px;
+    border-radius: 20px;
+    margin-right: 35px;
+    cursor: pointer;
+}
+
+.theme-selector{
+    background: hsl(6, 63%, 50%);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.calculator-screen{
+    width: 100%;
+    height: 75px;
+    padding: 10px;
+    background: hsl(224, 36%, 15%);
+    border-radius: 12px;
+    margin-bottom: 25px;
+}
+
+.calculator-keypad{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 60px);
+    gap: 12px;
+    padding: 25px;
+    background:hsl(223, 31%, 20%);
+    justify-content: center;
+    border-radius: 6px;
+}
+
+.key{
+    aspect-ratio: 1/1;
+    background: hsl(30, 25%, 89%);
+    box-shadow: 0 4px 2px hsl(28, 16%, 65%);
+    border: solid 1px transparent;
+    border-radius: 7px;
+    font-size: 30px;
+    font-weight: 700;
+    color: hsl(224, 28%, 35%);
+    cursor: pointer;
+}
+
+.key-del, .key-reset{
+    background: hsl(225, 21%, 49%);
+    box-shadow: 0 4px 2px hsl(224, 28%, 35%);
+    text-transform: uppercase;
+    font-size: 18px;
+    color: hsl(0, 0%, 100%);
+}
+
+.key-equal{
+    background: hsl(6, 63%, 50%);
+    box-shadow: 0 4px 2px hsl(6, 70%, 34%);
+    color: hsl(0, 0%, 100%);
+    grid-column: 3 / span 2;
+    aspect-ratio: 2/1;
+}
+
+.key-reset{
+    grid-column: 1 / span 2;
+    aspect-ratio: 2/1;
+}
