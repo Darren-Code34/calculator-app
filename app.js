@@ -67,9 +67,9 @@ function resetDisplay(){
 
 const keyDel = document.querySelector(".key-del");
 
-keyDel.addEventListener("click", eraseNumber);
+keyDel.addEventListener("click", eraser);
 
-function eraseNumber(){
+function eraser(){
 
     if(calculatorScreen == ""){
         calculatorScreen.textContent = "veillez saisir une opération";
@@ -80,9 +80,53 @@ function eraseNumber(){
         },1000)
     }
     else{
-    calculatorScreen.textContent = [...calculatorScreen.textContent].slice(0, -1).join();
+        calculatorScreen.textContent = calculatorScreen.textContent.slice(0, -1);
     }
 }
+
+
+
+//Choose the theme
+const themes = document.querySelectorAll(".theme");
+const themeSelector = document.querySelector(".theme-selector");
+const body = document.querySelector("body");
+const headerCalculator = document.querySelector(".header-calculator");
+const themeSwitch = document.querySelector(".theme-switch");
+const calculatorKeypad = document.querySelector(".calculator-keypad");
+
+
+themes.forEach(theme=>{
+    theme.addEventListener("click", changeTheme)
+
+    function changeTheme(){
+        if(theme.textContent === "1"){
+            themeSelector.style.marginLeft = "0";
+            themeSelector.style.marginRight = "auto";
+            body.classList.remove("theme2");
+            headerCalculator.classList.remove("theme2");
+            themeSwitch.classList.remove("theme2");
+            calculatorScreen.classList.remove("theme2");
+            calculatorKeypad.classList.remove("theme2");
+            keyDel.classList.remove("theme2");
+            keyReset.classList.remove("theme2");
+        }
+        else if(theme.textContent === "2"){
+            themeSelector.style.marginLeft = "auto";
+            themeSelector.style.marginRight = "auto";
+            body.classList.add("theme2");
+            headerCalculator.classList.add("theme2");
+            themeSwitch.classList.add("theme2");
+            calculatorScreen.classList.add("theme2");
+            calculatorKeypad.classList.add("theme2");
+            keyDel.classList.add("theme2");
+            keyReset.classList.add("theme2");
+        }
+        else if(theme.textContent === "3"){
+            themeSelector.style.marginLeft = "auto";
+            themeSelector.style.marginRight = "0";
+        }
+    }
+})
 
 
 

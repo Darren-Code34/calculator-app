@@ -5,14 +5,16 @@
     box-sizing: border-box;
 }
 
-body.theme1{
-    background:  hsl(222, 26%, 31%);
-}
 
 body{
+    background:  hsl(222, 26%, 31%);
     padding: 30px;
     font-family:"League Spartan", sans-serif ;
     font-weight: 700;
+}
+
+body.theme2{
+    background: hsl(0, 0%, 90%);
 }
 
 .calculator-container{
@@ -25,6 +27,11 @@ body{
     align-items: end;
     margin-bottom: 30px;
 }
+
+.header-calculator.theme2{
+    color: hsl(60, 10%, 19%);
+}
+
 
 .title{
     font-size: 26px;
@@ -67,12 +74,17 @@ body{
     cursor: pointer;
 }
 
+.theme-switch.theme2{
+    background: hsl(0, 5%, 81%);
+}
+
 .theme-selector{
     background: hsl(6, 63%, 50%);
     width: 15px;
     height: 15px;
     border-radius: 50%;
-    cursor: pointer;
+    pointer-events: none;
+    position: relative;
 }
 
 .calculator-screen{
@@ -87,6 +99,11 @@ body{
     color: hsl(0, 0%, 100%);
 }
 
+.calculator-screen.theme2{
+    background: hsl(0, 0%, 93%);
+    color: hsl(60, 10%, 19%);
+}
+
 
 .calculator-keypad{
     width: 100%;
@@ -97,6 +114,10 @@ body{
     background:hsl(223, 31%, 20%);
     justify-content: center;
     border-radius: 6px;
+}
+
+.calculator-keypad.theme2{
+    background:hsl(0, 5%, 81%);
 }
 
 .key{
@@ -111,8 +132,19 @@ body{
     cursor: pointer;
 }
 
+.key:hover{
+    background: hsl(0, 0%, 100%);
+
+}
+
 .key.active{
     box-shadow: inset 0 4px 2px hsl(28, 16%, 65%);
+}
+
+.key.theme2{
+    background:  hsl(45, 7%, 89%);
+    box-shadow: 0 4px 2px hsl(35, 11%, 61%);
+
 }
 
 .key-del, .key-reset{
@@ -127,8 +159,18 @@ body{
     border: solid 1px transparent;
 }
 
+.key-del:hover, .key-reset:hover{
+    background: hsl(225, 27%, 62%);
+}
+
 .key-del.active, .key-reset.active{
     box-shadow: inset 0 4px 2px hsl(224, 28%, 35%);
+}
+
+.key-del.theme2, .key-reset.theme2{
+    background: hsl(185, 42%, 37%);
+    box-shadow: 0 4px 2px hsl(185, 58%, 25%);
+
 }
 
 .key-equal{
@@ -141,6 +183,10 @@ body{
     font-weight: 700;
     cursor: pointer;
     border: solid 1px transparent;
+}
+
+.key-equal:hover{
+    background: hsl(6, 78%, 66%);
 }
 
 .key-equal.active{
