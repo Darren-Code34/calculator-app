@@ -109,6 +109,19 @@ themes.forEach(theme=>{
             calculatorKeypad.classList.remove("theme2");
             keyDel.classList.remove("theme2");
             keyReset.classList.remove("theme2");
+
+            body.classList.remove("theme3");
+            headerCalculator.classList.remove("theme3");
+            themeSwitch.classList.remove("theme3");
+            themeSelector.classList.remove("theme3")
+            calculatorScreen.classList.remove("theme3");
+            calculatorKeypad.classList.remove("theme3");
+            keyButtons.forEach(keyButton =>{
+                keyButton.classList.remove("theme3")
+            });
+            keyDel.classList.remove("theme3");
+            keyReset.classList.remove("theme3");
+            keyEqual.classList.remove("theme3");
         }
         else if(theme.textContent === "2"){
             themeSelector.style.marginLeft = "auto";
@@ -120,18 +133,43 @@ themes.forEach(theme=>{
             calculatorKeypad.classList.add("theme2");
             keyDel.classList.add("theme2");
             keyReset.classList.add("theme2");
+
+            body.classList.remove("theme3");
+            headerCalculator.classList.remove("theme3");
+            themeSwitch.classList.remove("theme3");
+            themeSelector.classList.remove("theme3")
+            calculatorScreen.classList.remove("theme3");
+            calculatorKeypad.classList.remove("theme3");
+            keyButtons.forEach(keyButton =>{
+                keyButton.classList.remove("theme3")
+            });
+            keyDel.classList.remove("theme3");
+            keyReset.classList.remove("theme3");
+            keyEqual.classList.remove("theme3");
         }
         else if(theme.textContent === "3"){
             themeSelector.style.marginLeft = "auto";
             themeSelector.style.marginRight = "0";
+            body.classList.remove("theme2");
+            headerCalculator.classList.remove("theme2");
+            themeSwitch.classList.remove("theme2");
+            calculatorScreen.classList.remove("theme2");
+            calculatorKeypad.classList.remove("theme2");
+            keyDel.classList.remove("theme2");
+            keyReset.classList.remove("theme2");
+
+            body.classList.add("theme3");
+            headerCalculator.classList.add("theme3");
+            themeSwitch.classList.add("theme3");
+            themeSelector.classList.add("theme3")
+            calculatorScreen.classList.add("theme3");
+            calculatorKeypad.classList.add("theme3");
+            keyButtons.forEach(keyButton =>{
+                keyButton.classList.add("theme3")
+            });
+            keyDel.classList.add("theme3");
+            keyReset.classList.add("theme3");
+            keyEqual.classList.add("theme3");
         }
     }
 })
-
-
-
-
-
-
-
-
